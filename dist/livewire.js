@@ -3251,7 +3251,7 @@ ${expression ? 'Expression: "' + expression + '"\n\n' : ""}`, el);
     return ["keydown", "keyup"].includes(event);
   }
   function isClickEvent(event) {
-    return ["contextmenu", "click", "mouse"].some((i) => event.includes(i));
+    return ["contextmenu", "click", "mouse"].some((i) => event?.includes(i));
   }
   function isListeningForASpecificKeyThatHasntBeenPressed(e, modifiers) {
     let keyModifiers = modifiers.filter((i) => {
